@@ -1,0 +1,22 @@
+<app-template-full-width [title]="myTitle" *ngIf="this.collection$ |async as collection">
+  <!-- <button (click)="changeTitle();">change title</button> -->
+  <!-- <pre>{{ collection | json }}</pre> -->
+  <app-table-light [headers]="headers">
+    <tr *ngFor="let client of collection">
+      <td>
+        <app-icon-edit (click)="goToEdit(client.id)"></app-icon-edit>
+        <app-icon-delete (click)="goToDelete(client.id)"></app-icon-delete>
+      </td>
+      <td>{{ client.name }}</td>
+      <td>{{ client.totalCaHt | currency }}</td>
+      <td [appState]="client.state">
+        <select (change)="changeState(client, $event)">
+          <option *ngFor="let state of states" [value]="state" [selected]="client.state === state">
+            {{ state }}
+          </option>
+        </select>
+      </td>
+    </tr>
+  </app-table-light>
+</app-template-full-width>
+<app-btn route="add" [label]="label"></app-btn>

@@ -1,0 +1,3 @@
+<app-template-container title="edit order" *ngIf="client$ | async as client">
+  <app-form-client [init]="client" (submitted)="action($event)"></app-form-client>
+</app-template-container>

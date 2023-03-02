@@ -1,0 +1,51 @@
+<form [formGroup]="form" (ngSubmit)="register()" class="container">
+  <div class="row">
+
+    <div class="mb-2 col-12 col-md-6">
+      <label for="firstName" class="form-label">First Name</label>
+      <input formControlName="firstName" type="text" class="form-control" id="firstName">
+      <div *ngIf="form.controls['firstName'].invalid && (form.controls['firstName'].touched || errorMsg)"
+        class="alert alert-danger">invalid field</div>
+    </div>
+
+    <div class="mb-2 col-12 col-md-6">
+      <label for="lastName" class="form-label">Last Name</label>
+      <input formControlName="lastName" type="text" class="form-control" id="lastName">
+      <div *ngIf="form.controls['lastName'].invalid && (form.controls['lastName'].touched || errorMsg)"
+        class="alert alert-danger">invalid field</div>
+    </div>
+
+    <div class="mb-2 col-12 col-md-6">
+      <label for="email" class="form-label">Email</label>
+      <input formControlName="email" type="text" class="form-control" id="email">
+      <div *ngIf="form.controls['email'].invalid && (form.controls['email'].touched || errorMsg)"
+        class="alert alert-danger">invalid
+        field</div>
+    </div>
+
+    <div class="mb-2 col-12 col-md-6">
+      <label for="grant" class="form-label">Grant</label>
+      <select formControlName="grants" class="form-control" id="grant">
+        <option *ngFor="let state of states" [ngValue]="state">{{ state }}</option>
+      </select>
+      <div *ngIf="form.controls['grants'].invalid && (form.controls['grants'].touched || errorMsg)"
+        class="alert alert-danger">invalid
+        field</div>
+    </div>
+
+    <div class="mb-2 col-12" *ngIf="!init.email">
+      <label for="password" class="form-label">Password</label>
+      <input formControlName="password" type="text" class="form-control" id="password">
+      <div *ngIf="form.controls['password'].invalid && (form.controls['password'].touched || errorMsg)"
+        class="alert alert-danger">invalid
+        field</div>
+    </div>
+
+
+
+    <div class="mb-2 col-12">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+
+</form>

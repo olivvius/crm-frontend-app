@@ -1,0 +1,6 @@
+<app-template-container title="Edit User">
+
+  <app-form-user *ngIf="user$ | async as user" [init]="user" [edit]="true" (submitted)="action($event)">
+  </app-form-user>
+
+</app-template-container>

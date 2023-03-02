@@ -1,0 +1,81 @@
+{
+  "orders": [
+    {
+      "typePresta": "formation",
+      "client": "Capgemini",
+      "nbJours": 12,
+      "tjmHt": 1000,
+      "tva": 20,
+      "state": "CONFIRMED",
+      "comment": "Merci Cap pour les 24k",
+      "id": 1
+    },
+    {
+      "tjmHt": 1200,
+      "nbJours": 5,
+      "tva": 20,
+      "state": "OPTION",
+      "typePresta": "toto",
+      "client": "tutu",
+      "comment": "test",
+      "id": 2
+    },
+    {
+      "typePresta": "test2",
+      "client": "test2",
+      "nbJours": 3,
+      "tjmHt": 1000,
+      "tva": 20,
+      "state": "CONFIRMED",
+      "comment": "uuu",
+      "id": 3
+    },
+    {
+      "typePresta": "test",
+      "client": "test",
+      "nbJours": 1,
+      "tjmHt": 1200,
+      "tva": 20,
+      "state": "OPTION",
+      "comment": null,
+      "id": 4
+    }
+  ],
+  "clients": [
+    {
+      "tva": 20,
+      "state": "ACTIVE",
+      "id": 1,
+      "name": "Capgemini",
+      "totalCaHt": 120000,
+      "comment": "un comment pour client modis"
+    },
+    {
+      "tva": 20,
+      "state": "INACTIVE",
+      "id": 2,
+      "name": "Modis",
+      "totalCaHt": 120000,
+      "comment": "un comment pour client modis"
+    },
+    {
+      "tva": 20,
+      "state": "ACTIVE",
+      "name": "modis",
+      "totalCaHt": 0,
+      "comment": "rsger",
+      "id": 3
+    }
+  ],
+  "users": [
+    {
+      "email": "toto@mail.com",
+      "password": "$2a$10$GYD3hYNhSGkSlTsgH.xDHecIfjlNbpUoT97aLi.qdw6QBh.Jz0BEG",
+      "firstName": "toto",
+      "lastName": "tutu",
+      "confirmedPassword": "totopw",
+      "grants": "USER",
+      "id": 1
+    }
+  ]
+}
